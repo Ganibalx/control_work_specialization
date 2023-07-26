@@ -1,0 +1,102 @@
+sergey@sergey-GA-78LMT-USB3-R2:~/Teach/control_work_specialization$ cat > "Домашние животные"
+Собака
+Кошка
+Хомяк
+sergey@sergey-GA-78LMT-USB3-R2:~/Teach/control_work_specialization$ cat > "Вьючные животные"
+Лошадь
+Верблюд
+Осел
+sergey@sergey-GA-78LMT-USB3-R2:~/Teach/control_work_specialization$ cat  "Домашние животные" "Вьючные животные" > "new file"
+sergey@sergey-GA-78LMT-USB3-R2:~/Teach/control_work_specialization$ cat "new file"
+Собака
+Кошка
+Хомяк
+Лошадь
+Верблюд
+Осел
+sergey@sergey-GA-78LMT-USB3-R2:~/Teach/control_work_specialization$ mv "new file" "Друзья человека"
+sergey@sergey-GA-78LMT-USB3-R2:~/Teach/control_work_specialization$ ls
+ README.md  'Вьючные животные'  'Домашние животные'  'Друзья человека'
+sergey@sergey-GA-78LMT-USB3-R2:~/Teach/control_work_specialization$ mkdir homework
+sergey@sergey-GA-78LMT-USB3-R2:~/Teach/control_work_specialization$ mv "Друзья человека" ./homework
+sergey@sergey-GA-78LMT-USB3-R2:~/Teach/control_work_specialization$ ls
+ homework   README.md  'Вьючные животные'  'Домашние животные'
+sergey@sergey-GA-78LMT-USB3-R2:~/Teach/control_work_specialization$ cd homework
+sergey@sergey-GA-78LMT-USB3-R2:~/Teach/control_work_specialization/homework$ ls
+'Друзья человека'
+sergey@sergey-GA-78LMT-USB3-R2:~/Teach/control_work_specialization/homework$ cd ..
+sergey@sergey-GA-78LMT-USB3-R2:~/Teach/control_work_specialization$ sudo apt update
+Сущ:1 http://ru.archive.ubuntu.com/ubuntu jammy InRelease
+Сущ:2 http://ru.archive.ubuntu.com/ubuntu jammy-updates InRelease              
+Сущ:3 http://ru.archive.ubuntu.com/ubuntu jammy-backports InRelease            
+Сущ:4 http://security.ubuntu.com/ubuntu jammy-security InRelease               
+Сущ:5 https://ppa.launchpadcontent.net/graphics-drivers/ppa/ubuntu jammy InRelease
+Сущ:6 https://download.docker.com/linux/ubuntu jammy InRelease                 
+Сущ:7 https://packages.redis.io/deb jammy InRelease                            
+Чтение списков пакетов… Готово            
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово         
+Может быть обновлено 14 пакетов. Запустите «apt list --upgradable» для их показа.
+sergey@sergey-GA-78LMT-USB3-R2:~/Teach/control_work_specialization$ sudo apt install mysql-server
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово         
+Следующие НОВЫЕ пакеты будут установлены:
+  mysql-server
+Обновлено 0 пакетов, установлено 1 новых пакетов, для удаления отмечено 0 пакетов, и 14 пакетов не обновлено.
+Необходимо скачать 9 462 B архивов.
+После данной операции объём занятого дискового пространства возрастёт на 35,8 kB.
+Пол:1 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 mysql-server all 8.0.33-0ubuntu0.22.04.2 [9 462 B]
+Получено 9 462 B за 0с (35,7 kB/s)           
+Выбор ранее не выбранного пакета mysql-server.
+(Чтение базы данных … на данный момент установлено 210500 файлов и каталогов.)
+Подготовка к распаковке …/mysql-server_8.0.33-0ubuntu0.22.04.2_all.deb …
+Распаковывается mysql-server (8.0.33-0ubuntu0.22.04.2) …
+Настраивается пакет mysql-server (8.0.33-0ubuntu0.22.04.2) …
+sergey@sergey-GA-78LMT-USB3-R2:~/Teach/control_work_specialization$ apt download 7zip
+Пол:1 http://ru.archive.ubuntu.com/ubuntu jammy/universe amd64 7zip amd64 21.07+dfsg-4 [971 kB]
+Получено 971 kB за 0с (3 381 kB/s)
+sergey@sergey-GA-78LMT-USB3-R2:~/Teach/control_work_specialization$ ll
+итого 4012
+drwxrwxr-x  4 sergey sergey    4096 июл 25 03:40  ./
+drwxrwxr-x 11 sergey sergey    4096 июл 24 21:50  ../
+-rw-r--r--  1 sergey sergey  970772 фев 23  2022  7zip_21.07+dfsg-4_amd64.deb
+drwxrwxr-x  8 sergey sergey    4096 июл 24 21:50  .git/
+drwxrwxr-x  2 sergey sergey    4096 июл 24 23:05  homework/
+-rw-rw-r--  1 sergey sergey 1186760 июл 25 03:31  p7zip.deb
+-rw-rw-r--  1 sergey sergey    5171 июл 24 21:56  README.md
+-rw-rw-r--  1 sergey sergey    4066 июл 25 02:51  Terminal.txt
+-rw-r--r--  1 sergey sergey 1731886 июл  3 07:48  vim_2%3a8.2.3995-1ubuntu2.9_amd64.deb
+-rw-r--r--  1 sergey sergey  175730 мар 26  2022  zip_3.0-12build2_amd64.deb
+-rw-rw-r--  1 sergey sergey      37 июл 24 23:03 'Вьючные животные'
+-rw-rw-r--  1 sergey sergey      35 июл 24 23:02 'Домашние животные'
+sergey@sergey-GA-78LMT-USB3-R2:~/Teach/control_work_specialization$ sudo dpkg -i 7zip_21.07+dfsg-4_amd64.deb
+Выбор ранее не выбранного пакета 7zip.
+(Чтение базы данных … на данный момент установлено 210672 файла и каталога.)
+Подготовка к распаковке 7zip_21.07+dfsg-4_amd64.deb …
+Распаковывается 7zip (21.07+dfsg-4) …
+Настраивается пакет 7zip (21.07+dfsg-4) …
+Обрабатываются триггеры для man-db (2.10.2-1) …
+sergey@sergey-GA-78LMT-USB3-R2:~/Teach/control_work_specialization$ sudo dpkg -l zip
+Желаемый=неизвестно[u]/установить[i]/удалить[r]/вычистить[p]/зафиксировать[h]
+| Состояние=не[n]/установлен[i]/настроен[c]/распакован[U]/частично настроен[F]/
+            частично установлен[H]/trig-aWait/Trig-pend
+|/ Ошибка?=(нет)/требуется переустановка[R] (верхний регистр
+в полях состояния и ошибки указывает на ненормальную ситуацию)
+||/ Имя            Версия       Архитектура  Описание
++++-==============-============-============-=================================
+ri  zip            3.0-12build2 amd64        Archiver for .zip files
+sergey@sergey-GA-78LMT-USB3-R2:~/Teach/control_work_specialization$ sudo dpkg -l 7zip
+Желаемый=неизвестно[u]/установить[i]/удалить[r]/вычистить[p]/зафиксировать[h]
+| Состояние=не[n]/установлен[i]/настроен[c]/распакован[U]/частично настроен[F]/
+            частично установлен[H]/trig-aWait/Trig-pend
+|/ Ошибка?=(нет)/требуется переустановка[R] (верхний регистр
+в полях состояния и ошибки указывает на ненормальную ситуацию)
+||/ Имя            Версия       Архитектура  Описание
++++-==============-============-============-=================================================
+ii  7zip           21.07+dfsg-4 amd64        7-Zip file archiver with a high compression ratio
+sergey@sergey-GA-78LMT-USB3-R2:~/Teach/control_work_specialization$ sudo dpkg -P 7zip
+(Чтение базы данных … на данный момент установлено 210683 файла и каталога.)
+Удаляется 7zip (21.07+dfsg-4) …
+Обрабатываются триггеры для man-db (2.10.2-1) …
+sergey@sergey-GA-78LMT-USB3-R2:~/Teach/control_work_specialization$ 
