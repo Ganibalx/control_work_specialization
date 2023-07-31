@@ -29,7 +29,7 @@ public class view {
     }
 
     private void all_pets() throws Exception{
-        if(this.c.get_pets() == null){
+        if(this.c.get_pets().size() == 0){
             System.out.println("В реестре еще нет животных!");
         }else{
             int j=1;
